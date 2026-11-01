@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef3f8;
+  color: #1f2937;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: #1e3a5f;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.logo {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: #22c55e;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
+header button {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+header button:hover {
+  background: white;
+  color: #1e3a5f;
+}
+
+.layout {
+  display: flex;
+  flex: 1;
+}
+
+nav {
+  width: 200px;
+  padding: 15px;
+  background: white;
+  border-right: 1px solid #dbe3ec;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  padding: 9px 12px;
+  margin-bottom: 4px;
+  color: #374151;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background: #e6f0fb;
+}
+
+nav a.active {
+  background: #22c55e;
+  color: white;
+  font-weight: bold;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+footer {
+  background: #1e3a5f;
+  color: white;
+  padding: 12px 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.box {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.box h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #1e3a5f;
+}
+
+.stat1 { border-left: 6px solid #ef4444; }
+.stat2 { border-left: 6px solid #22c55e; }
+.stat3 { border-left: 6px solid #ef4444; }
+.stat4 { border-left: 6px solid #22c55e; }
+
+.calendar {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.calendar th {
+  color: #1e3a5f;
+  padding: 8px;
+}
+
+.calendar td {
+  padding: 8px;
+  border: 1px solid #e5eaf0;
+}
+
+.calendar .trening {
+  background: #22c55e;
+  color: white;
+  font-weight: bold;
+}
+
+.macro {
+  margin-bottom: 15px;
+}
+
+.macro p {
+  margin: 0 0 5px 0;
+}
+
+.bar {
+  background: #e2e8f0;
+  border-radius: 10px;
+  height: 24px;
+}
+
+.bar-fill {
+  height: 24px;
+  border-radius: 10px;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: right;
+  padding-right: 8px;
+}
+
+.bielkoviny { background: #3b82f6; }
+.sacharidy { background: #f97316; }
+.tuky { background: #eab308; }
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #dbe3ec;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background: #e6f0fb;
+  color: #1e3a5f;
+}
+
+.tabulka {
+  overflow-x: auto;
+}
+
+.modry { background: #dbeafe; border-left: 6px solid #3b82f6; }
+.zeleny { background: #dcfce7; border-left: 6px solid #22c55e; }
+.cerveny { background: #fee2e2; border-left: 6px solid #ef4444; }
+
+main button {
+  background: white;
+  border: 1px solid #1e3a5f;
+  color: #1e3a5f;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+main button:hover {
+  background: #e6f0fb;
+}
+
+main .hlavne {
+  background: #22c55e;
+  border-color: #22c55e;
+  color: white;
+  font-weight: bold;
+}
+
+main .hlavne:hover {
+  background: #16a34a;
+}
+
+.tlacidlo-siroke {
+  width: 100%;
+  margin-top: 8px;
+}
+
+@media (max-width: 700px) {
+  .hamburger {
+    display: inline-block;
+  }
+
+
+  nav {
+    position: fixed;
+    top: 54px;
+    left: -230px;
+    width: 220px;
+    height: 100%;
+    z-index: 10;
+    transition: left 0.3s;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+  #menu-toggle:checked ~ .layout nav {
+    left: 0;
+  }
+}
